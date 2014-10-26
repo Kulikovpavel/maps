@@ -1,0 +1,22 @@
+<head>
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+    var moscow_map;
+        
+    ymaps.ready(function(){
+        moscow_map = new ymaps.Map("first_map", {
+            center: [55.9, 36.8],
+            zoom: 10
+        });
+        
+        
+        moscow_map.layers.add(new ymaps.Layer(
+'irgenplan/%z/tile-%x-%y.png'));
+    });
+    
+</script>
+</head>
+<body>
+    <p>Генеральный (проектный) план Истринского района</p>
+    <div id="first_map" style="width:100gh; height:100vh"></div>
+</body>
